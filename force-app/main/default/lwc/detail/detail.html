@@ -1,0 +1,25 @@
+<template>
+    <template if:true={product}>
+        <div class="slds-var-m-around_medium">
+        <div class="container">
+            <div class="slds-text-heading_medium">{product.fields.Name.value}</div>
+            <div class="price">{product.fields.MSRP__c.displayValue}</div>
+            <img class="product-img" src={product.fields.Picture_URL__c.value}></img>
+            <p class="badges">
+                <lightning-badge class="slds-theme_info" label={product.fields.Material__c.value}></lightning-badge>
+                <lightning-badge class="slds-theme_info" label={product.fields.Level__c.value}></lightning-badge>
+                <lightning-badge class="slds-theme_info" label={product.fields.Category__c.value}></lightning-badge>
+            </p>
+            <ul class="slds-var-m-around_medium slds-text-heading_medium">
+                <li>Price : {product.fields.MSRP__c.displayValue}</li>
+                <li>Size Available : S M L XL XXL</li>
+                <li>Base Material : {product.fields.Material__c.value}</li>
+            </ul>
+            <button class="slds-var-m-around_medium slds-button slds-button_brand">Add to Cart</button>
+        </div>
+    </div>
+    </template>
+    <template if:false={product}>
+        <div class="detail-section"></div>
+    </template>
+</template>

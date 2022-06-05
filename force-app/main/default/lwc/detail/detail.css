@@ -1,0 +1,16 @@
+ebody{
+    margin: 0;
+  } 
+  
+  .badges {
+    margin-top: 10px;
+  }
+
+  .price {
+    color: green;
+    font-size: 30px;
+  }
+  
+  .detail-section, .container {
+    background-color:rgb(255, 255, 255);
+  }
